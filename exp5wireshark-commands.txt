@@ -1,0 +1,36 @@
+Ethernet Layer
+eth
+frame
+eth.dst == ff:ff:ff:ff:ff:ff
+
+Data Link Layer
+eth.src
+eth.dst
+arp
+arp.opcode == 1
+arp.opcode == 2
+
+Network Layer
+ip
+ip.flags.mf == 1
+icmp
+icmp.type == 8
+icmp.type == 0
+
+Transport Layer
+tcp
+tcp.flags
+tcp.flags.syn == 1 and tcp.flags.ack == 0
+tcp.flags.syn == 1 and tcp.flags.ack == 1
+tcp.flags.ack == 1 and tcp.len == 0
+udp
+
+Application Layer
+bootp or dhcp
+bootp.option.dhcp == 1
+bootp.option.dhcp == 2
+bootp.option.dhcp == 3
+bootp.option.dhcp == 5
+ftp
+http
+http.request.method == "GET"

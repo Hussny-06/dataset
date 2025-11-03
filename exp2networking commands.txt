@@ -1,0 +1,44 @@
+ping google.com
+tracert google.com
+nslookup openai.com
+netstat -n
+netstat -r
+netstat -a
+arp -a
+ipconfig
+ipconfig /all
+route print
+route add 0.0.0.0 mask 255.255.255.0 192.168.1.1
+route add 192.168.2.0 mask 255.255.255.0 192.168.1.1
+route print
+route delete 192.168.2.0
+route delete 0.0.0.0
+route print 
+
+my :
+
+# ping
+ping -c4 google.com
+
+# traceroute
+traceroute google.com
+
+# nslookup & dig
+nslookup google.com
+dig google.com +short
+
+# netstat / ss
+sudo netstat -tuln
+ss -tuln
+
+# arp
+arp -n
+sudo arp-scan --localnet
+
+# ip / ifconfig
+ip addr show
+ifconfig -a
+
+# route
+ip route show
+route -n

@@ -1,0 +1,21 @@
+nmap --version
+nmap 192.168.1.1
+nmap -sV 192.168.1.1
+nmap -O 192.168.1.1
+nmap -A 192.168.1.1
+nmap -p 80,443 192.168.1.1
+nmap -p 1-1000 192.168.1.1
+nmap 192.168.1.1 192.168.1.2 192.168.1.3
+nmap -sL 192.168.1.0/24
+nmap -p 80,443 --open 192.168.1.0/24
+nmap -v -A -sS -O testfire.net
+
+my :
+
+profile: Intense scan, Command: nmap-T4-A-v 192.168.1.1/24
+
+profile: Ping scan, Command: nmap -sn 192.168.1.1/24
+
+profile: Quick scan, Command: nmap-T4-F 192.168.1.1/24
+
+profile: Quick Traceroute, Command: nmap-sn --traceroute 192.168.1.1/24
